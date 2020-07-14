@@ -1,0 +1,27 @@
+
+window.onload = function buildNav() {
+    var elements = document.querySelector('body');
+    var sections = elements.getElementsByTagName('section');
+    const ul = document.querySelector('#navbar__list');
+
+    for (let i = 0; i < sections.length; i++) {
+        let li = document.createElement('li');
+        let a = document.createElement('a');
+        a.href = `#${sections[i].id}`;
+        a.innerText = `Section ${[i+1]} `;
+        li.appendChild(a);
+        ul.appendChild(li);
+    }
+};
+
+link.addEventListener("click", event => {
+    event.preventDefault();
+    let target = document.querySelector(event.sections[i].hash);
+    target.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  });
+
+ let a = document.createElement('a');
+        a.href = `#${sections[i].id}`;
